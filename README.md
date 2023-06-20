@@ -14,11 +14,17 @@ and paste the text present in attach file
 
 4)change the address to 192.168.1.1 (you can put whatever you want.)
 in gatway section put your router gateway check in your pc in windows (type : ipconfig /all and in default gateway paste that ip here)
+
 5)below ethernet put your ethernet interface in my case its enp0s10 put yours there.
+
 6) save it .
+
 7) and type sudo netplan apply.
+
 8) dont worry about warnings.
+
 9) sudo reboot now .
+
 10) after rebooting put ifconfig or ip a you will find your static ip address 
 
 enjoy :) 
