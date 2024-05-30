@@ -1,30 +1,11 @@
-# Creating-static-ip-address-for-linux
+# Configuring a Static IP Address on Linux
 
-1)Create backup file of following file in the same directory like follow
-cd /etc/netplan/00-installer-config.yaml 
-as
-mv /etc/netplan/00-installer-config.yaml  /etc/netplan/00-installer-config.yaml.bck
+This guide will help you configure a static IP address on your Linux machine using Netplan.
 
-2)so now create file name static.yaml
-touch static.yaml
+## Steps
 
-3)open file in editor 
-sudo nano static.yaml 
-and paste the text present in attach file
+### 1. Create a Backup of the Existing Configuration File
+First, back up your current Netplan configuration file:
 
-4)change the address to 192.168.1.1 (you can put whatever you want.)
-in gatway section put your router gateway check in your pc in windows (type : ipconfig /all and in default gateway paste that ip here)
-
-5)below ethernet put your ethernet interface in my case its enp0s10 put yours there.
-
-6) save it .
-
-7) and type sudo netplan apply.
-
-8) dont worry about warnings.
-
-9) sudo reboot now .
-
-10) after rebooting put ifconfig or ip a you will find your static ip address 
-
-enjoy :) 
+```bash
+sudo cp /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.bck
