@@ -1,11 +1,14 @@
 network:
   version: 2
-  renderer: networkd
+  renderer: NetworkManager #choose your own renderer for me it was Network manager 
   ethernets:
     enp3s0:
       addresses:
-        - 192.168.XXX.XXX/24
-      gateway4: 192.168.XXX.XXX
+        - 192.168.x.xx/24 # ip you want to use
+      routes:
+        - to: 0.0.0.0/0
+          via: 192.168.x.x # your default gateway check your wifi settings for that 
       nameservers:
-          search: [mydomain, otherdomain]
-          addresses: [1.1.1.1, 1.0.0.1]
+        search: [mydomain, otherdomain]
+        addresses: [1.1.1.1, 1.0.0.1]
+
