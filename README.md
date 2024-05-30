@@ -85,4 +85,4 @@ ip a
 ## You should see your new static IP address configured for your network interface.
 ## Enjoy!
 
-#Your static IP address is now set up and ready to use.
+# Your static IP address is now set up and ready to use.
